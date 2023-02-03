@@ -1,9 +1,9 @@
+import { Link } from "react-router-dom"
 import styled from "styled-components"
 
 function Painel() {
   return (
     <PainelFather>
-      {/* <h1>Hello Word</h1> */}
       <section className="painel">
         <div className="partOne">
           <div className="logo">
@@ -16,7 +16,7 @@ function Painel() {
           <form className="form">
             <input type="email" placeholder="Digite seu e-mail" />
             <input type="password" placeholder="Digite sua senha" />
-            <button>Acessar</button>
+            <Link to={"/home"}><button>Acessar </button></Link>
           </form>
         </div>
 
@@ -54,8 +54,7 @@ const PainelFather = styled.main`
   }
 
   .logo img {
-    display: flex;
-    margin: 50px 100px;
+    margin: 40px 100px;
     width: 60%;
     height: 30%;
   }
@@ -104,7 +103,7 @@ const PainelFather = styled.main`
   .partTwo {
     width: 400px;
     height: 550px;
-    background-image: url("../../assets/sky-bg.jfif");
+    background-image: url("../../assets/sky-bg.jpg");
   }
 
   .partTwo .code-img {
